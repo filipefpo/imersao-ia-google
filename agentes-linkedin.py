@@ -35,13 +35,14 @@ load_dotenv()
 # Configura a API Key do Google Gemini
 # Pega a chave da variável de ambiente GOOGLE_API_KEY
 import os
+
 API_KEY = os.getenv("GOOGLE_API_KEY")
 
 if not API_KEY:
     print("Erro: GOOGLE_API_KEY não configurada.")
     print("Por favor, crie um arquivo .env com a linha: GOOGLE_API_KEY=SUA_CHAVE_AQUI")
     # Você pode adicionar um exit() aqui se quiser parar o programa caso a chave não seja encontrada
-    # exit()
+    exit() # Descomente esta linha se quiser que o script pare aqui caso a chave não seja encontrada
 else:
     print("API Key do Gemini configurada com sucesso!")
 
